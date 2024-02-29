@@ -25,8 +25,6 @@ public:
 
     void add(char el);
 
-    void add(char* elements);
-
     void add(string elements);
 
     string toString();

@@ -75,29 +75,6 @@ void Set::add(char el)
     elements.push_back(el);
 }
 
-void Set::add(char* elements)
-{
-    Set* Buf = new Set();
-
-    if (elements[0] == '{')
-        for (int i = 1; elements[i] != '\0'; i++)
-        {
-            if (elements[i] == ' ' || elements[i] == ',' || elements[i] != '}')
-                continue;
-            else if (elements[i] == '{')
-            {
-                Buf->add(elements + i);
-
-                while (elements[i] != '}')
-                    i++;
-            }
-            else
-                Buf->add(elements[i]);
-        }
-    else
-        cout << "ERR";
-}
-
 void Set::add(string elements)
 {
     int k = 0;
